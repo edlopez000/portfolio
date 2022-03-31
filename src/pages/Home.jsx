@@ -1,12 +1,9 @@
 import { Typography } from '@mui/material';
 import React from 'react';
-
-function App() {
+export default function Home() {
   return (
     <>
-      <Typography>Hello Default Page!</Typography>
+      <Typography>Home Page</Typography>
     </>
   );
 }
-
-export default App;
