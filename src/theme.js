@@ -10,6 +10,15 @@ let theme = createTheme({
       main: '#f50057',
     },
   },
+  components: {
+    MuiLink: {
+      styleOverrides: {
+        underlineAlways: {
+          textDecoration: 'none',
+        },
+      },
+    },
+  },
 });
 
 theme = responsiveFontSizes(theme);
