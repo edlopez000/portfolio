@@ -3,7 +3,7 @@ import React from 'react';
 export default function Home() {
   return (
     <>
-      <Typography>Home Page</Typography>
+      <Typography variant="h4">Home Page</Typography>
     </>
   );
 }

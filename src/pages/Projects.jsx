@@ -3,7 +3,7 @@ import React from 'react';
 export default function Projects() {
   return (
     <>
-      <Typography>Projects Page</Typography>
+      <Typography variant="h4">Projects Page</Typography>
     </>
   );
 }

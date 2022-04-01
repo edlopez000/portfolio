@@ -3,7 +3,7 @@ import React from 'react';
 export default function About() {
   return (
     <>
-      <Typography>About Page</Typography>
+      <Typography variant="h4">About Page</Typography>
     </>
   );
 }
