@@ -11,10 +11,10 @@ export default function Home() {
       }}
     >
       <Typography variant="h4" align="center">
-        Hi, I'm <b>Edward</b>.
+        Hi, I&apos;m <b>Edward</b>.
       </Typography>
       <Typography align="center">
-        I'm a developer focusing on building platforms and products that
+        I&apos;m a developer focusing on building platforms and products that
         deliver.
       </Typography>
     </Container>

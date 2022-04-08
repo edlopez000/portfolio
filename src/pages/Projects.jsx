@@ -1,6 +1,5 @@
 import { Container, Grid, Typography } from '@mui/material';
 import React from 'react';
-import PortfolioModal from '../components/PortfolioModal';
 import ProjectCard from '../components/ProjectCard';
 export default function Projects() {
   return (

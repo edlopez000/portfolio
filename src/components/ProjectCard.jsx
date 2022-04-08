@@ -6,6 +6,7 @@ import {
   CardMedia,
   Typography,
 } from '@mui/material';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 export default function ProjectCard({
@@ -41,3 +42,8 @@ export default function ProjectCard({
     </Card>
   );
 }
+
+ProjectCard.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+};

@@ -11,6 +11,7 @@ specifiers:
   '@vitejs/plugin-react': ^1.0.7
   eslint: ^8.12.0
   eslint-plugin-react: ^7.29.4
+  prop-types: ^15.8.1
   react: ^17.0.2
   react-dom: ^17.0.2
   react-router-dom: '6'
@@ -25,6 +26,7 @@ dependencies:
   '@mui/icons-material': 5.5.1_2ff24fea9ff73993f15b5a5382bc372f
   '@mui/material': 5.5.3_9595c0fe4bca5fc99bf42a66077e39bf
   '@types/react': 17.0.43
+  prop-types: 15.8.1
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-router-dom: 6.2.2_react-dom@17.0.2+react@17.0.2
