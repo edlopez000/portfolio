@@ -1,5 +1,5 @@
 import { ThemeProvider } from '@emotion/react';
-import { Container, CssBaseline } from '@mui/material';
+import { Container, CssBaseline, Divider } from '@mui/material';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Nav from './components/Nav';
@@ -17,6 +17,7 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Nav />
+        <Divider />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
