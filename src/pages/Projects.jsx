@@ -1,6 +1,9 @@
 import { Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 import ProjectCard from '../components/ProjectCard';
+import HopeworksCert from '../projectsInfo/HopeworksCert.mdx';
+import ShelterApp from '../projectsInfo/ShelterApp.mdx';
+
 export default function Projects() {
   return (
     <>
@@ -9,6 +12,7 @@ export default function Projects() {
         sx={{
           flexGrow: 1,
           display: 'flex',
+          alignItems: 'center',
         }}
       >
         {/* <Typography>
@@ -25,16 +29,16 @@ export default function Projects() {
           spacing={2}
           display="flex"
           justifyContent="center"
-          alignItems="center"
+          alignItems="stretch"
         >
-          <Grid item>
-            <ProjectCard title="Project #1" />
+          <Grid item sx={{ display: 'flex' }}>
+            <ProjectCard
+              title="Hopeworks Certificate Generator"
+              project={<HopeworksCert />}
+            />
           </Grid>
-          <Grid item>
-            <ProjectCard title="Project #2" />
-          </Grid>
-          <Grid item>
-            <ProjectCard title="Project #3" />
+          <Grid item sx={{ display: 'flex' }}>
+            <ProjectCard title="ShelterApp" project={<ShelterApp />} />
           </Grid>
         </Grid>
       </Container>
