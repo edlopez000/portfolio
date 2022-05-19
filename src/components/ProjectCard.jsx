@@ -7,7 +7,6 @@ import {
   CardMedia,
   Container,
   Dialog,
-  Grid,
   IconButton,
   Stack,
   Typography,
@@ -35,26 +34,34 @@ export default function ProjectCard({
         }}
       >
         <CardMedia component="img" image="https://placehold.jp/200x200.png" />
-        <CardContent>
-          <Grid spacing={5}>
-            <Grid item>
-              <Typography fontWeight={'bold'} gutterBottom textAlign="center">
-                {title}
-              </Typography>
-            </Grid>
-            <Grid item xs={'auto'}>
-              <Typography variant="caption">{description}</Typography>
-            </Grid>
-            <Grid item>
-              <CardActions>
-                <Button size="small" variant="outlined" onClick={handleOpen}>
-                  <Typography variant="caption">Learn More</Typography>
-                </Button>
-              </CardActions>
-            </Grid>
-          </Grid>
+        <CardContent
+          sx={{
+            display: 'flex',
+            minHeight: 200,
+            flex: 1,
+            flexDirection: 'column',
+          }}
+        >
+          <Typography fontWeight={'bold'} gutterBottom textAlign="center">
+            {title}
+          </Typography>
+          <Typography variant="caption" flexGrow={3}>
+            {description}
+          </Typography>
+          <CardActions
+            sx={{
+              justifyContent: 'center',
+              flexGrow: 1,
+              marginTop: 'auto',
+            }}
+          >
+            <Button size="small" variant="outlined" onClick={handleOpen}>
+              <Typography variant="caption">Learn More</Typography>
+            </Button>
+          </CardActions>
         </CardContent>
       </Card>
+
       <Dialog open={open} onClose={handleClose}>
         <Container>
           <Stack direction={'row'} justifyContent={'space-between'} mt={5}>
