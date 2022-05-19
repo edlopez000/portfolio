@@ -1,5 +1,5 @@
+import CloseIcon from '@mui/icons-material/Close';
 import {
-  Box,
   Button,
   Card,
   CardActions,
@@ -7,13 +7,13 @@ import {
   CardMedia,
   Container,
   Dialog,
+  Grid,
   IconButton,
+  Stack,
   Typography,
 } from '@mui/material';
 import PropTypes from 'prop-types';
-import React from 'react';
-import { useState } from 'react';
-import CloseIcon from '@mui/icons-material/Close';
+import React, { useState } from 'react';
 
 export default function ProjectCard({
   title = 'Title',
@@ -32,45 +32,37 @@ export default function ProjectCard({
           margin: 1,
           maxWidth: 200,
           boxShadow: 2,
-          flexGrow: 1,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between'
         }}
       >
         <CardMedia component="img" image="https://placehold.jp/200x200.png" />
-        <CardContent
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            flexGrow: 1,
-            flexDirection: 'column',
-          }}
-        >
-          <Typography fontWeight={'bold'} gutterBottom textAlign="center">
-            {title}
-          </Typography>
-          <Typography variant="caption">{description}</Typography>
-          <CardActions
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-between',
-            }}
-          >
-            <Button size="small" variant="outlined" onClick={handleOpen}>
-              <Typography variant="caption">Learn More</Typography>
-            </Button>
-          </CardActions>
+        <CardContent>
+          <Grid spacing={5}>
+            <Grid item>
+              <Typography fontWeight={'bold'} gutterBottom textAlign="center">
+                {title}
+              </Typography>
+            </Grid>
+            <Grid item xs={'auto'}>
+              <Typography variant="caption">{description}</Typography>
+            </Grid>
+            <Grid item>
+              <CardActions>
+                <Button size="small" variant="outlined" onClick={handleOpen}>
+                  <Typography variant="caption">Learn More</Typography>
+                </Button>
+              </CardActions>
+            </Grid>
+          </Grid>
         </CardContent>
       </Card>
       <Dialog open={open} onClose={handleClose}>
         <Container>
-          <Box display={'flex'} justifyContent={'end'} mr={1} mt={1}>
+          <Stack direction={'row'} justifyContent={'space-between'} mt={5}>
+            <Typography variant="h4">{title}</Typography>
             <IconButton onClick={handleClose}>
               <CloseIcon color={'black'} />
             </IconButton>
-          </Box>
+          </Stack>
           {project}
         </Container>
       </Dialog>
