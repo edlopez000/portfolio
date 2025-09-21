@@ -1,26 +1,37 @@
-import { createTheme, responsiveFontSizes } from '@mui/material';
+import { createTheme, responsiveFontSizes } from "@mui/material";
 
-let theme = createTheme({
-  palette: {
-    type: 'light',
-    primary: {
-      main: '#000000',
+export const createAppTheme = (mode) => {
+  let theme = createTheme({
+    palette: {
+      mode: mode,
+      primary: {
+        main: mode === "dark" ? "#ffffff" : "#000000",
+      },
+      secondary: {
+        main: "#f50057",
+      },
+      background: {
+        default: mode === "dark" ? "#121212" : "#ffffff",
+        paper: mode === "dark" ? "#1e1e1e" : "#ffffff",
+      },
+      text: {
+        primary: mode === "dark" ? "#ffffff" : "#000000",
+        secondary: mode === "dark" ? "#b3b3b3" : "#666666",
+      },
     },
-    secondary: {
-      main: '#f50057',
-    },
-  },
-  components: {
-    MuiLink: {
-      styleOverrides: {
-        underlineAlways: {
-          textDecoration: 'none',
+    components: {
+      MuiLink: {
+        styleOverrides: {
+          underlineAlways: {
+            textDecoration: "none",
+          },
         },
       },
     },
-  },
-});
+  });
 
-theme = responsiveFontSizes(theme);
+  return responsiveFontSizes(theme);
+};
 
-export default theme;
+const defaultTheme = createAppTheme("light");
+export default defaultTheme;
