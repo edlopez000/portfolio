@@ -1,4 +1,4 @@
-import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from "@mui/icons-material/Close";
 import {
   Button,
   Card,
@@ -10,13 +10,13 @@ import {
   IconButton,
   Stack,
   Typography,
-} from '@mui/material';
-import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+} from "@mui/material";
+import PropTypes from "prop-types";
+import React, { useState } from "react";
 
 export default function ProjectCard({
-  title = 'Title',
-  description = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+  title = "Title",
+  description = "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
   project,
 }) {
   const [open, setOpen] = useState(false);
@@ -36,13 +36,13 @@ export default function ProjectCard({
         <CardMedia component="img" image="https://placehold.jp/200x200.png" />
         <CardContent
           sx={{
-            display: 'flex',
+            display: "flex",
             minHeight: 200,
             flex: 1,
-            flexDirection: 'column',
+            flexDirection: "column",
           }}
         >
-          <Typography fontWeight={'bold'} gutterBottom textAlign="center">
+          <Typography fontWeight={"bold"} gutterBottom textAlign="center">
             {title}
           </Typography>
           <Typography variant="caption" flexGrow={3}>
@@ -50,9 +50,9 @@ export default function ProjectCard({
           </Typography>
           <CardActions
             sx={{
-              justifyContent: 'center',
+              justifyContent: "center",
               flexGrow: 1,
-              marginTop: 'auto',
+              marginTop: "auto",
             }}
           >
             <Button size="small" variant="outlined" onClick={handleOpen}>
@@ -64,10 +64,10 @@ export default function ProjectCard({
 
       <Dialog open={open} onClose={handleClose}>
         <Container>
-          <Stack direction={'row'} justifyContent={'space-between'} mt={5}>
+          <Stack direction={"row"} justifyContent={"space-between"} mt={5}>
             <Typography variant="h4">{title}</Typography>
             <IconButton onClick={handleClose}>
-              <CloseIcon color={'black'} />
+              <CloseIcon color={"black"} />
             </IconButton>
           </Stack>
           {project}
