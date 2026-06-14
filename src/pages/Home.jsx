@@ -1,7 +1,10 @@
 import { Container, Typography } from "@mui/material";
 import React from "react";
+import usePageTitle from "../hooks/usePageTitle";
 
 export default function Home() {
+  usePageTitle("Home");
+
   return (
     <Container
       sx={{

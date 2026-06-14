@@ -1,9 +1,15 @@
 import { Container, Typography, Box, Chip, Grid } from "@mui/material";
 import React from "react";
+import usePageTitle from "../hooks/usePageTitle";
 
 export default function About() {
+  usePageTitle("About Me");
+
   const certifications = [
-    { name: "Microsoft Certified: Azure Data Fundamentals", date: "March 2026" },
+    {
+      name: "Microsoft Certified: Azure Data Fundamentals",
+      date: "March 2026",
+    },
     { name: "Microsoft Certified: Azure Fundamentals", date: "February 2026" },
   ];
 
@@ -54,7 +60,11 @@ export default function About() {
         </Typography>
 
         <Box sx={{ mb: 3 }}>
-          <Typography variant="subtitle1" sx={{ fontWeight: "bold" }} gutterBottom>
+          <Typography
+            variant="subtitle1"
+            sx={{ fontWeight: "bold" }}
+            gutterBottom
+          >
             Observability Platform Implementation
           </Typography>
           <Typography component="p" sx={{ mb: 2 }}>
@@ -74,7 +84,11 @@ export default function About() {
         </Box>
 
         <Box sx={{ mb: 3 }}>
-          <Typography variant="subtitle1" sx={{ fontWeight: "bold" }} gutterBottom>
+          <Typography
+            variant="subtitle1"
+            sx={{ fontWeight: "bold" }}
+            gutterBottom
+          >
             System Reliability & Monitoring
           </Typography>
           <Typography component="p" sx={{ mb: 2 }}>
@@ -121,7 +135,11 @@ export default function About() {
         <Grid container spacing={1}>
           {certifications.map(({ name, date }) => (
             <Grid key={name}>
-              <Chip label={`${name} (${date})`} variant="outlined" size="small" />
+              <Chip
+                label={`${name} (${date})`}
+                variant="outlined"
+                size="small"
+              />
             </Grid>
           ))}
         </Grid>
