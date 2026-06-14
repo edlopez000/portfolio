@@ -8,8 +8,7 @@ export default function Nav() {
     <Stack
       direction="row"
       spacing={2}
-      justifyContent="space-between"
-      alignItems="center"
+      sx={{ justifyContent: "space-between", alignItems: "center" }}
     >
       <Stack direction="row" spacing={2}>
         <MUILink component={Link} to="/">

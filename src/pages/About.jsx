@@ -31,7 +31,7 @@ export default function About() {
         <Typography variant="h6" gutterBottom>
           Professional Summary
         </Typography>
-        <Typography paragraph>
+        <Typography component="p" sx={{ mb: 2 }}>
           Experienced Production Support Engineer with a strong background in
           system reliability, observability platforms, and proactive
           infrastructure monitoring. Proven track record of implementing modern
@@ -49,19 +49,19 @@ export default function About() {
         </Typography>
 
         <Box sx={{ mb: 3 }}>
-          <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
+          <Typography variant="subtitle1" sx={{ fontWeight: "bold" }} gutterBottom>
             Observability Platform Implementation
           </Typography>
-          <Typography paragraph>
+          <Typography component="p" sx={{ mb: 2 }}>
             • Designed and implemented comprehensive observability platform
             using Docker, Grafana, Tempo, and Prometheus, revolutionizing system
             monitoring capabilities
           </Typography>
-          <Typography paragraph>
+          <Typography component="p" sx={{ mb: 2 }}>
             • Migrated from manual log access to automated log aggregation using
             Loki with S3 storage, dramatically improving operational efficiency
           </Typography>
-          <Typography paragraph>
+          <Typography component="p" sx={{ mb: 2 }}>
             • Implemented OpenTelemetry standards across .NET services,
             establishing foundation for distributed tracing and improved
             debugging capabilities
@@ -69,18 +69,18 @@ export default function About() {
         </Box>
 
         <Box sx={{ mb: 3 }}>
-          <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
+          <Typography variant="subtitle1" sx={{ fontWeight: "bold" }} gutterBottom>
             System Reliability & Monitoring
           </Typography>
-          <Typography paragraph>
+          <Typography component="p" sx={{ mb: 2 }}>
             • Built self-monitoring system with automated health checks and
             alert notifications for Docker container status
           </Typography>
-          <Typography paragraph>
+          <Typography component="p" sx={{ mb: 2 }}>
             • Reduced incident response time by providing centralized logging
             and real-time system visibility
           </Typography>
-          <Typography paragraph>
+          <Typography component="p" sx={{ mb: 2 }}>
             • Currently expanding platform to additional services, demonstrating
             scalability and adoption success
           </Typography>
@@ -91,19 +91,19 @@ export default function About() {
         <Typography variant="h6" gutterBottom>
           Professional Experience & Responsibilities
         </Typography>
-        <Typography paragraph>
+        <Typography component="p" sx={{ mb: 2 }}>
           • Monitor and maintain production system health and performance across
           distributed microservices architecture
         </Typography>
-        <Typography paragraph>
+        <Typography component="p" sx={{ mb: 2 }}>
           • Troubleshoot complex technical issues using systematic methodology
           with focus on root cause analysis
         </Typography>
-        <Typography paragraph>
+        <Typography component="p" sx={{ mb: 2 }}>
           • Collaborate cross-functionally with development, operations, and
           business teams to resolve production issues
         </Typography>
-        <Typography paragraph>
+        <Typography component="p" sx={{ mb: 2 }}>
           • Design and maintain alert systems for proactive issue detection and
           create operational runbooks with clear technical documentation
         </Typography>
@@ -115,7 +115,7 @@ export default function About() {
         </Typography>
         <Grid container spacing={1}>
           {skills.map((skill) => (
-            <Grid item key={skill}>
+            <Grid key={skill}>
               <Chip label={skill} variant="outlined" />
             </Grid>
           ))}

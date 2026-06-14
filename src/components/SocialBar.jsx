@@ -7,7 +7,11 @@ import React from "react";
 export default function SocialBar() {
   return (
     <Container>
-      <Stack direction="row" spacing={1} justifyContent="center" mb={1}>
+      <Stack
+        direction="row"
+        spacing={1}
+        sx={{ justifyContent: "center", mb: 1 }}
+      >
         <Link
           href="https://github.com/edlopez000/"
           color="inherit"
