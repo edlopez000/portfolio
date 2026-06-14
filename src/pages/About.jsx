@@ -2,6 +2,11 @@ import { Container, Typography, Box, Chip, Grid } from "@mui/material";
 import React from "react";
 
 export default function About() {
+  const certifications = [
+    { name: "Microsoft Certified: Azure Data Fundamentals", date: "March 2026" },
+    { name: "Microsoft Certified: Azure Fundamentals", date: "February 2026" },
+  ];
+
   const skills = [
     "Docker",
     "Grafana",
@@ -107,6 +112,19 @@ export default function About() {
           • Design and maintain alert systems for proactive issue detection and
           create operational runbooks with clear technical documentation
         </Typography>
+      </Box>
+
+      <Box sx={{ mb: 4 }}>
+        <Typography variant="h6" gutterBottom>
+          Certifications
+        </Typography>
+        <Grid container spacing={1}>
+          {certifications.map(({ name, date }) => (
+            <Grid key={name}>
+              <Chip label={`${name} (${date})`} variant="outlined" size="small" />
+            </Grid>
+          ))}
+        </Grid>
       </Box>
 
       <Box sx={{ mb: 4 }}>
