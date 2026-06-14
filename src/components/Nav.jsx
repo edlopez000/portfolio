@@ -17,9 +17,6 @@ export default function Nav() {
         <MUILink component={Link} to="about">
           About Me
         </MUILink>
-        {/* <MUILink component={Link} to="projects">
-          Projects
-        </MUILink> */}
       </Stack>
       <DarkModeToggle />
     </Stack>
